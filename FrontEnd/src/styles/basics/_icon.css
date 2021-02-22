@@ -1,0 +1,43 @@
+
+
+
+.icon-add {
+    background: url(../../assets/icon/common-icon.png) no-repeat -154px -205px;
+	width: 12px;
+	height: 11px;
+    
+}
+.icon-copy {
+    background: url(../../assets/icon/common-icon.png) no-repeat -54px -204px;
+	width: 11px;
+	height: 12px;
+    
+}
+.icon-edit {
+    background: url(../../assets/icon/common-icon.png) no-repeat -79px -205px;
+	width: 12px;
+	height: 12px;
+    
+}
+.icon-del {
+    background: url(../../assets/icon/common-icon.png) no-repeat -105px -204px;
+	width: 10px;
+	height: 12px;
+    
+}
+.icon-load {
+    background: url(../../assets/icon/common-icon.png) no-repeat -129px -202px;
+	width: 12px;
+	height: 16px;
+    
+}
+.icon-close{
+	background: url(../../assets/icon/common-icon.png) no-repeat -255px -155px;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	right: 20px;
+	cursor: pointer;
+}
+
+

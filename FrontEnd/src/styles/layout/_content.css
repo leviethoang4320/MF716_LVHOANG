@@ -1,0 +1,38 @@
+.content {
+    position: absolute;
+    top: 61px;
+    left: 221px;
+    width: calc(100% - 233px);
+    height: calc(100vh - 71px);
+    background-color: #e5e6eb;
+    padding:10px 0px 0px 10px;
+}
+
+/*Page tile*/
+    .content .header-content {
+        display: flex;
+    align-items: center;
+    height: 35px;
+
+    }
+
+        .content .header-content .title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content .header-content .content-feature{
+            position: absolute;
+            right: 16px;
+        }
+
+        /*filter bar*/
+        
+
+
+
+/* Paging */
+.content .paging-bar{
+    height: 56px;
+}
+

@@ -1,0 +1,25 @@
+
+
+
+    .paging-bar{
+        display: flex;
+        position: relative;
+        height: calc(100% - 425px);
+        width: 100% ;
+        border-top: 2px solid #bbbbbb;
+        align-items: center;
+    }
+    .paging-bar .paging-info {
+        position: absolute;
+        right: 20px;
+        /* top: 0; */
+        /* margin: auto; */
+        margin-top: 10px;
+    }
+    .paging-bar .paging-option{
+        display: flex;
+    }
+    .paging-bar .paging-option div{
+        margin-left: 10px;
+        margin-top: 10px;
+    }

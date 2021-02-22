@@ -1,0 +1,9 @@
+C:\MF_DEMO_API\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.deps.json
+C:\MF_DEMO_API\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.dll
+C:\MF_DEMO_API\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csprojAssemblyReference.cache
+C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfoInputs.cache
+C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfo.cs
+C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
+C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
+C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb

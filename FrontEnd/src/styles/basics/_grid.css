@@ -1,0 +1,95 @@
+﻿
+/* Grid */
+.grid {
+    width: 100%;
+    overflow-x:auto;
+    overflow-y:auto;
+    height: calc(100vh - 178px );
+}
+
+.grid table{
+    width: 100%;
+}
+
+    
+tr.table-row.head.filter th table {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.grid table td {
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    padding: 10px 10px !important;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+
+.grid table .first th  {
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    padding: 10px 10px !important;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    font-weight: bold !important;
+    background-color: #fafafa;
+}
+.grid table .filter th  {
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    
+    height: 38px;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    font-weight: bold !important;
+    background-color: #ffffff;
+}
+
+
+.grid tbody tr:nth-child(2n+1) {
+    background-color: #fafafa;
+}
+
+.grid tbody tr:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+.selected {
+    background-color: #d9d9d9 !important;
+    cursor: pointer;
+}
+
+
+.grid table td span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+.grid td div {
+    
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+

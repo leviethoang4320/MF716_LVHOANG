@@ -1,0 +1,12 @@
+C:\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.DataLayer.deps.json
+C:\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.DataLayer.dll
+C:\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.DataLayer.pdb
+C:\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Common.dll
+C:\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csprojAssemblyReference.cache
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.AssemblyInfoInputs.cache
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.AssemblyInfo.cs
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csproj.CoreCompileInputs.cache
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csproj.CopyComplete
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.dll
+C:\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.pdb

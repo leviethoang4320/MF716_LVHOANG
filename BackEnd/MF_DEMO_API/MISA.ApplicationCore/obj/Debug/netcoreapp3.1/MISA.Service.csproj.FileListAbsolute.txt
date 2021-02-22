@@ -1,0 +1,16 @@
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Service.deps.json
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Service.dll
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Service.pdb
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Common.dll
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.DataLayer.dll
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\MF_DEMO_API\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.DataLayer.pdb
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.csprojAssemblyReference.cache
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.Properties.Resources.resources
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.csproj.GenerateResource.cache
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.AssemblyInfoInputs.cache
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.AssemblyInfo.cs
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.csproj.CoreCompileInputs.cache
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.csproj.CopyComplete
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.dll
+C:\MF_DEMO_API\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.Service.pdb
