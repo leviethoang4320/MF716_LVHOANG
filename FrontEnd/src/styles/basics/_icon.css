@@ -39,5 +39,15 @@
 	right: 20px;
 	cursor: pointer;
 }
+.i-save {
+	background: url(../../assets/icon/common-icon.png) no-repeat -330px -129px;
+	width: 11px;
+	height: 11px;
+}
+.i-cancel {
+	background: url(../../assets/icon/common-icon.png) no-repeat -255px -130px;
+	width: 10px;
+	height: 10px;
+}
 
 

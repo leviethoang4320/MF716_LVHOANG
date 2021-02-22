@@ -57,42 +57,55 @@
             }
 
             .nav-item .nav-item-icon {
-                width: 20px;
-                height: 20px;
+            
                 align-self: center;
                 margin-right: 10px;
-                background-size: contain;
+               
             }
+
 
 /*Tổng quan*/
 .nav-item-dashboard {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -5px -5px;
+	width: 20px;
+	height: 16px;
 }
 
 /*Báo cáo*/
 .nav-item-report {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -5px -334px;
+	width: 20px;
+	height: 16px;
 }
 
 /*Đơn hàng*/
 .nav-item-order {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -5px -458px;
+	width: 20px;
+	height: 22px;
 }
 
 /*Mua hàng*/
 .nav-item-buy {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -1px -377px;
+	width: 24px;
+	height: 19px;
 }
 /*Khuyến mại*/
 .nav-item-sale {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -3px -117px;
+	width: 21px;
+	height: 23px;
 }
 /*Quản lý cửa hàng*/
 .nav-item-store {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -4px -421px;
+	width: 20px;
+	height: 17px;
 }
 /*Hàng hóa*/
 .nav-item-goods {
-    background-image: url(../../assets/icon/common-icon.png);
+    background: url('../../assets/icon/iconMenu.png') no-repeat -2px -502px;
+	width: 26px;
+	height: 15px;
 }
-

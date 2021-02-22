@@ -3,7 +3,7 @@
         <div class="dialog-bg"></div>
         <div class="dialog-confirm"  >
             <div class="dialog-title">Xóa dữ liệu</div>
-            <div class="dialog-content">Bạn có chắc muốn xóa <span>{{name}}</span> khỏi danh sách cửa hàng?</div>
+            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{name}}</span> khỏi danh sách cửa hàng?</div>
             <div class="dialog-footer">
                 
                 <button @click="del()"  class="m-btn m-btn-default m-btn-del" ><span></span><span  class="btn-text">Xóa</span></button>
@@ -87,12 +87,20 @@ export default {
 .dialog-content {
     font-size: 17px;
 }
+.dialog-content {
+   
+    margin-left: 35px;
+}
 .dialog-title {
     font-size: 20px;
     margin-left: 0px;
     background-color: #e9ebee;
     margin-top: 0;
     height: 50px;
+}
+button.m-btn.m-btn-default.m-btn-del {
+    background-color: #e14c4c;
+    color: #e9ebee;
 }
 
 </style>

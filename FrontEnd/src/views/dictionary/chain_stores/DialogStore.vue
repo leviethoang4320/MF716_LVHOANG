@@ -106,9 +106,9 @@
             </div>
             
             <div class="dialog-footer">
-                <button  class="m-btn m-btn-default b-save" @click="save()"><i class="i-save"></i><span  class="btn-text save">Lưu</span></button>
+                <button  class="m-btn m-btn-default b-save" @click="save()"><span class="i-save"></span><span  class="btn-text save">Lưu</span></button>
                 
-                <button  class="m-btn m-btn-default b-cancel" @click="dlg_close()"><i class="i-cancel"></i><span  class="btn-text cancel">Hủy</span></button>
+                <button  class="m-btn m-btn-default b-cancel" @click="dlg_close()"><span class="i-cancel"></span><span  class="btn-text cancel">Hủy</span></button>
                 
             </div>
         </div>
