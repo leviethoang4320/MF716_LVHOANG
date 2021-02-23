@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {}
+    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {}
   },
   "projects": {
-    "C:\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
+        "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
         "projectName": "MISA.Common",
-        "projectPath": "C:\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
-        "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
-        "outputPath": "C:\\MF_DEMO_API\\MISA.Common\\obj\\",
+        "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
+        "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

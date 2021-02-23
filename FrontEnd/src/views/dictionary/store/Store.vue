@@ -48,17 +48,46 @@
                         
                     </tr>
                     <tr class="table-row head filter">
-                        <th colspan="1" rowspan="1" v-for="(item,index) in store" :key="index" >
-                            <table cellspacing="1px" cellpadding="1px" border="0" v-if="item.key!='Status'">
+                        <th colspan="1" rowspan="1" >
+                            <table cellspacing="1px" cellpadding="1px" border="0" >
                                 <tr  >
                                     <td style="width: 40px; text-align: center;" >*</td>
-                                    <td></td>
+                                    <td><input @change="getFilter()" type="text" v-model="filter.code"></td>
+                                </tr>
+                              
+                            </table>
+                        </th>
+                        <th colspan="1" rowspan="1" > 
+                            <table cellspacing="1px" cellpadding="1px" border="0" >
+                                <tr  >
+                                    <td style="width: 40px; text-align: center;" >*</td>
+                                    <td><input @change="getFilter()" type="text" v-model="filter.name"></td>
+                                </tr>
+                               
+                            </table>
+                        </th>
+                        <th colspan="1" rowspan="1" > 
+                            <table cellspacing="1px" cellpadding="1px" border="0" >
+                                <tr  >
+                                    <td style="width: 40px; text-align: center;" >*</td>
+                                    <td><input @change="getFilter()" type="text" v-model="filter.address"></td>
                                 </tr>
                                 
                             </table>
-                            <select v-else name="" id="" style="border:none;">
-                                <option value="">Đang hoạt động</option>
-                                <option value="">Không hoạt động</option>
+                        </th>
+                        <th colspan="1" rowspan="1" > 
+                            <table cellspacing="1px" cellpadding="1px" border="0" >
+                                <tr  >
+                                    <td style="width: 40px; text-align: center;" >*</td>
+                                    <td><input @change="getFilter()" type="text" v-model="filter.phone"></td>
+                                </tr>
+                                
+                            </table>
+                        </th>
+                        <th colspan="1" rowspan="1" > 
+                            <select @change="getFilter()" name="" id="" style="border:none;" v-model="filter.status">
+                                <option value="Đang hoạt động">Đang hoạt động</option>
+                                <option value="Dừng hoạt động">Dừng hoạt động</option>
                             </select>
                         </th>
                         
@@ -67,7 +96,7 @@
                     
                 </thead>
                 <tbody>
-                    <tr name="tr" class="table-row table-body"  v-for="(data,index) in resData" :key="index" :id="data.StoreId" @click="onFocus(data.StoreId)" @dblclick="dlg_openEdit2(data.StoreId)" >
+                    <tr name="tr" class="table-row table-body"  v-for="(data,index) in resData" :key="index" :id="data.StoreId" @click="onFocus(data.StoreId,data.StoreName)" @dblclick="dlg_openEdit2(data.StoreId)" >
                         <td rowspan="1" colspan="1" v-for="(item,index) in store" :key="index"  >
                             <div class="cell" >
                                 {{data[item.key]}}
@@ -118,7 +147,7 @@
         </div>
         
         
-         <DialogDel  v-if="Delete.Confirm" @closeDel="del()" :Delete = "Delete"  /> 
+         <DialogDelete  v-if="Delete.Confirm" @closeDel="del()" :Delete = "Delete"  /> 
          
         <div data-app>
          <DialogStore v-if="info.dialogOpen"  @close="close()" :info = "info" /> 
@@ -128,12 +157,12 @@
 
 <script>
 import DialogStore from './DialogStore'
-import DialogDel from './DialogDel'
+import DialogDelete from '../DialogDelete'
 import axios from 'axios'
 export default {
     components:{
         DialogStore,
-        DialogDel
+        DialogDelete
     },
     data() {
         return {
@@ -169,11 +198,29 @@ export default {
             Delete:{
                 Confirm: false,
                 StoreId: null,
+                StoreName: null
+            },
+            filter:{
+                code: "",
+                name: "",
+                phone: "",
+                address: "",
+                status: "",
+
+            },
+            filter_:{
+                code: "",
+                name: "",
+                phone: "",
+                address: "",
+                status: "",
+
             }
         }
     },
      mounted() {
-        this.load()
+        
+        this.getFilter();
     },
      methods: {
     
@@ -187,9 +234,10 @@ export default {
             })
             .catch(error => console.log(error));
         },
-        onFocus(id){
+        onFocus(id,name){
             this.info.StoreId = id;
-
+            this.Delete.StoreId = id;
+            this.Delete.StoreName = name;
            if(this.tempId!=null&&this.tempId!=""){
               
             document.getElementById(this.tempId).classList.remove("selected");
@@ -204,7 +252,7 @@ export default {
         },
         close(){
             this.info.dialogOpen = false;
-            this.load();
+            this.this.getFilter();
         },
         dlg_openAdd(){
             this.info.dialogOpen = !this.info.dialogOpen;
@@ -224,12 +272,52 @@ export default {
         dlg_openDel(){
             if(this.info.StoreId){
                 this.Delete.Confirm = true;
-                this.Delete.StoreId = this.info.StoreId;
+                
             }
         },
         del(){
-            this.load();
+            this.getFilter();
             this.Delete.Confirm = !this.Delete.Confirm;
+        },
+        getFilter(){
+            
+                if(this.filter.code == null || this.filter.code.trim() == ""){
+                    this.filter_.code = "all";               
+                }
+                 else
+                    this.filter_.code = this.filter.code;
+
+                if(this.filter.name == null || this.filter.name.trim() == ""){
+                    this.filter_.name = "all";
+                }
+                else 
+                    this.filter_.name = this.filter.name;
+
+                if(this.filter.address == null || this.filter.address.trim() == ""){
+                    this.filter_.address = "all";
+                }
+                else
+                    this.filter_.address = this.filter.address
+
+                if(this.filter.phone == null || this.filter.phone.trim() == ""){
+                    this.filter_.phone = "all";
+                }
+                else 
+                    this.filter_.phone = this.filter.phone;
+
+                if(this.filter.status == null || this.filter.status.trim() == ""){
+                    this.filter_.status = "all";
+                }
+                else 
+                    this.filter_.status = this.filter.status;
+                
+            axios.get('https://localhost:44384/api/Stores/filter/'+this.filter_.code + "&"+this.filter_.name + "&"+this.filter_.address + "&"+this.filter_.phone + "&"+this.filter_.status )
+            .then(response => {
+                this.resData = response.data;
+                
+                
+            })
+            .catch(error => console.log(error));
         }
         
      },
@@ -237,11 +325,12 @@ export default {
  }
  </script>
 
- <style scoped >
+<style scoped >
 
 .content-body {
     background-color: #ffffff;
     height: calc(100% - 10px);
+    margin-right: 15px;
 }
 
   .header-content{
@@ -258,6 +347,13 @@ export default {
     align-items: center;
     padding-right: 5px;
     cursor: pointer;
+  }
+  tr.table-row.head.filter input {
+    border: none !important;
+  }
+  tr.table-row.head.filter select {
+    border: none !important;
+    
   }
 
 </style>

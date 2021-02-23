@@ -31,6 +31,17 @@ tr.table-row.head.filter th table {
     text-overflow: ellipsis;
     word-break: break-all;
 }
+.grid select {
+    border-bottom: 1px solid #bbbbbb;
+    border-left: 1px solid #bbbbbb;
+    padding: 10px 10px !important;
+    text-align: left;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
 
 
 .grid table .first th  {

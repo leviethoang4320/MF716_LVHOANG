@@ -5684,19 +5684,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\taikh\\.nuget\\packages\\": {}
+    "C:\\Users\\lvhoang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
+      "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
       "projectName": "MISA.Service",
-      "projectPath": "C:\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
-      "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
-      "outputPath": "C:\\MF_DEMO_API\\MISA.ApplicationCore\\obj\\",
+      "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
+      "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5710,11 +5710,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
-              "projectPath": "C:\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
+            "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+              "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
             },
-            "C:\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj": {
-              "projectPath": "C:\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj"
+            "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj": {
+              "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj"
             }
           }
         }

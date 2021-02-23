@@ -7,3 +7,12 @@ C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfo.cs
 C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
 C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
 C:\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.deps.json
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.dll
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csprojAssemblyReference.cache
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfoInputs.cache
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfo.cs
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb

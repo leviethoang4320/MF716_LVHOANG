@@ -44,33 +44,33 @@ namespace MISA.Common.Models
                     return StoreId.ToString();
                 }
             }
-            public Guid? WardId { get; set; }
-            public string WardId_
+            public string WardId { get; set; }
+            /*public String WardId_
             {
                 get
                 {
-                if (WardId != null) return WardId.ToString();
-                else return null;
+                return WardId.ToString();
+                
                 }
-            }
-        public Guid? DistrictId { get; set; }
-        public string DistrictId_
+            }*/
+        public string DistrictId { get; set; }
+        /*public String DistrictId_
         {
             get
             {
-                if (DistrictId != null) return DistrictId.ToString();
-                else return null;
+                return DistrictId.ToString();
+               
             }
-        }
-        public Guid? ProvinceId { get; set; }
-        public string ProvinceId_
+        }*/
+        public string ProvinceId { get; set; }
+        /*public String ProvinceId_
         {
             get
             {
-                if (ProvinceId != null) return ProvinceId.ToString();
-                else return null;
+                return ProvinceId.ToString();
+                
             }
-        }
+        }*/
 
 
     }

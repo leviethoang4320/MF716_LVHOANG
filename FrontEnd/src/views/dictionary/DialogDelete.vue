@@ -3,7 +3,7 @@
         <div class="dialog-bg"></div>
         <div class="dialog-confirm"  >
             <div class="dialog-title">Xóa dữ liệu</div>
-            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{name}}</span> khỏi danh sách cửa hàng?</div>
+            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{this.Delete.StoreName}}</span> khỏi danh sách cửa hàng?</div>
             <div class="dialog-footer">
                 
                 <button @click="del()"  class="m-btn m-btn-default m-btn-del" ><span></span><span  class="btn-text">Xóa</span></button>
@@ -22,22 +22,8 @@ export default {
     },
     data:() => {
         return {
-            name: String
+            //name: String
         }
-    },
-    mounted() {
-        axios.get('https://localhost:44384/api/Stores/'+this.Delete.StoreId)
-            .then(response => {
-               
-                    
-                    /*for( var _item in this.storeInfo){
-                      
-                        var item = _item.toString();
-                        this.storeInfo[item] = response.data[item];
-                    }*/
-                    this.name = response.data.StoreName;
-            })
-            .catch(error => console.log(error))
     },
     methods: {
         del(){
@@ -90,6 +76,7 @@ export default {
 .dialog-content {
    
     margin-left: 35px;
+    margin-right: 10px;
 }
 .dialog-title {
     font-size: 20px;

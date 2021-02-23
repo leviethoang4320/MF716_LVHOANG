@@ -17,7 +17,7 @@ namespace MISA.DataLayer
         /// </summary>
         public string connectionString = "Host = 47.241.69.179;" +
             "Port= 3306;" +
-            "Database =MF716_LVHOANG_eShop;" +
+            "Database =MF716_LVHOANG;" +
             "User Id = dev;" +
             "Password = 12345678;" +
             "Character Set=utf8";

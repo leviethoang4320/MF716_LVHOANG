@@ -7,6 +7,6 @@ namespace MISA.Service.Interfaces
 {
     public interface IStoreService: IBaseService<Store>
     {
-        //public IEnumerable<Store> GetFilter(object filter);
+        public IEnumerable<Store> GetFilter(string code, string name, string address, string phone, string status);
     }
 }

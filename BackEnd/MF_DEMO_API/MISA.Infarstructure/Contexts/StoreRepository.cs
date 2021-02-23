@@ -9,11 +9,12 @@ namespace MISA.DataLayer.Contexts
 {
     public class StoreRepository: DbContext<Store>, IStoreRepository
     {
-        /*public IEnumerable<Store> GetFilter(Object filter)
+        public IEnumerable<Store> GetByFilter(string code, string name, string address, string phone, string status)
         {
             //var stores = _dbConnection.Query<Store>($"Proc_FilterStore",filter, commandType: CommandType.StoredProcedure);
-            var stores = _dbConnection.Query<Store>($"SELECT * FROM Store s WHERE s.StoreCode LIKE ('%',@StoreCode,'%') AND s.StoreName LIKE CONCAT('%',@StoreName,'%') AND s.Address LIKE CONCAT('%',@Address,'%') AND s.PhoneNumber LIKE CONCAT('%',@PhoneNumber,'%') AND s.Status LIKE CONCAT('%',@Status,'%')");
+            var sql = $"SELECT * FROM Store s WHERE s.StoreCode LIKE CONCAT('%','{code}','%') AND s.StoreName LIKE CONCAT('%','{name}','%') AND s.Address LIKE CONCAT('%','{address}','%') AND s.PhoneNumber LIKE CONCAT('%','{phone}','%') AND s.Status LIKE CONCAT('%','{status}','%')";
+            var stores = _dbConnection.Query<Store>(sql);
             return stores;
-        }*/
+        }
     }
 }

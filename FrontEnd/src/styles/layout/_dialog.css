@@ -24,8 +24,8 @@
     padding: .5em 1em;
     background: none;
     overflow: auto;    
-    top: 25%;
-    left: 25%;
+    top: calc(50% - 210px);
+    left: calc(50% - 350px);
     z-index: 101;
 }
 .dialog-title {

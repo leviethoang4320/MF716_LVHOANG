@@ -16,9 +16,9 @@ namespace MISA.Service.Services
         }
 
 
-        /*public IEnumerable<Store> GetFilter(object filter)
+        public IEnumerable<Store> GetFilter(string code, string name, string address, string phone, string status)
         {
-            return _dbContext.GetFilter(filter);
-        }*/
+            return _dbContext.GetByFilter(code, name, address, phone, status);
+        }
     }
 }

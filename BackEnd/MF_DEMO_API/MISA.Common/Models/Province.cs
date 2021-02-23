@@ -8,18 +8,12 @@ namespace MISA.Common.Models
     {
         public Province()
         {
-            ProvinceId = Guid.NewGuid();
+            
         }
 
-        public Guid ProvinceId { get; set; }
+        public string ProvinceId { get; set; }
 
-        public string ProvinceId_
-        {
-            get
-            {
-                return ProvinceId.ToString();
-            }
-        }
+       
         public string ProvinceName { get; set; }
     }
 }
