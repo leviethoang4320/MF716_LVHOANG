@@ -85,10 +85,19 @@
                             </table>
                         </th>
                         <th colspan="1" rowspan="1" > 
-                            <select @change="getFilter()" name="" id="" style="border:none;" v-model="filter.status">
-                                <option value="Đang hoạt động">Đang hoạt động</option>
-                                <option value="Dừng hoạt động">Dừng hoạt động</option>
-                            </select>
+                            <table cellspacing="1px" cellpadding="1px" border="0" >
+                                <tr  >
+                                    <td>
+                                   <select @change="getFilter()" name="" id="" style="border:none;" v-model="filter.status">
+                                        <option value="Đang hoạt động">Đang hoạt động</option>
+                                        <option value="Dừng hoạt động">Dừng hoạt động</option>
+                                   </select>
+                                   </td>
+                                    
+                                </tr>
+                                
+                            </table>
+                            
                         </th>
                         
                         
@@ -96,7 +105,7 @@
                     
                 </thead>
                 <tbody>
-                    <tr name="tr" class="table-row table-body"  v-for="(data,index) in resData" :key="index" :id="data.StoreId" @click="onFocus(data.StoreId,data.StoreName)" @dblclick="dlg_openEdit2(data.StoreId)" >
+                    <tr name="tr" class="table-row table-body"  v-for="(data,index) in resData" :key="index" :id="data.StoreId" @click="onFocus(data)" @dblclick="dlg_openEdit2(data)" >
                         <td rowspan="1" colspan="1" v-for="(item,index) in store" :key="index"  >
                             <div class="cell" >
                                 {{data[item.key]}}
@@ -147,10 +156,10 @@
         </div>
         
         
-         <DialogDelete  v-if="Delete.Confirm" @closeDel="del()" :Delete = "Delete"  /> 
+         <DialogDelete  v-if="openDelete.deleteOpen" @closeDel="del()" :focusData = "focusData"  /> 
          
         <div data-app>
-         <DialogStore v-if="info.dialogOpen"  @close="close()" :info = "info" /> 
+         <DialogStore v-if="openDialog.dialogOpen"  @close="close()" :openDialog = "openDialog" :focusData = "focusData" /> 
          </div>
     </div> 
 </template>
@@ -189,16 +198,13 @@ export default {
                     title : "Trạng thái hoạt động"
                 },
             ],
-            info:{
-            StoreId: null,
-            dialogOpen: false,
-            status: String
+            openDialog:{                   
+                dialogOpen: false,
+                status: String
             },
             tempId:"",
-            Delete:{
-                Confirm: false,
-                StoreId: null,
-                StoreName: null
+            openDelete:{
+                deleteOpen: false,
             },
             filter:{
                 code: "",
@@ -215,6 +221,18 @@ export default {
                 address: "",
                 status: "",
 
+            },
+            focusData:{
+                StoreCode: null,
+                StoreName: null,
+                Address: null,
+                PhoneNumber: null,
+                WardId: null,
+                TaxCode: null,
+                Street:null,
+                ProvinceId:null,
+                DistrictId:null,
+            
             }
         }
     },
@@ -234,50 +252,58 @@ export default {
             })
             .catch(error => console.log(error));
         },
-        onFocus(id,name){
-            this.info.StoreId = id;
-            this.Delete.StoreId = id;
-            this.Delete.StoreName = name;
+        onFocus(data){
+            for( var _item in data){
+                      
+                        var item = _item.toString();
+                        this.focusData[item] = data[item];
+                    }
+           
+            
+            
            if(this.tempId!=null&&this.tempId!=""){
               
             document.getElementById(this.tempId).classList.remove("selected");
            }
-            document.getElementById(id).classList.add("selected");
+            document.getElementById(this.focusData.StoreId).classList.add("selected");
             
 
-            this.tempId = id;
-            console.log(this.tempId)
+            this.tempId = this.focusData.StoreId;
+            
             
             
         },
         close(){
-            this.info.dialogOpen = false;
-            this.this.getFilter();
+            this.openDialog.dialogOpen = false;
+            this.getFilter();
         },
         dlg_openAdd(){
-            this.info.dialogOpen = !this.info.dialogOpen;
-            this.info.status = "Thêm mới cửa hàng"
+            this.openDialog.dialogOpen = !this.openDialog.dialogOpen;
+            this.openDialog.status = "Thêm mới cửa hàng"
         },
         dlg_openEdit1(){
-            if(this.info.StoreId){
-                this.info.dialogOpen = !this.info.dialogOpen;
-                this.info.status = "Sửa thông tin cửa hàng"
+            if(this.focusData.StoreId){
+                this.openDialog.dialogOpen = !this.openDialog.dialogOpen;
+                this.openDialog.status = "Sửa thông tin cửa hàng"
             }
         },
-        dlg_openEdit2(StoreId){
-            this.onFocus(StoreId)
-            this.info.dialogOpen = !this.info.dialogOpen;
-            this.info.status = "Sửa thông tin cửa hàng"
+        dlg_openEdit2(data){
+            this.onFocus(data);
+            this.openDialog.dialogOpen = !this.openDialog.dialogOpen;
+            this.openDialog.status = "Sửa thông tin cửa hàng"
         },
         dlg_openDel(){
-            if(this.info.StoreId){
-                this.Delete.Confirm = true;
+            if(this.focusData.StoreId){
+                this.openDelete.deleteOpen = true;
                 
             }
         },
         del(){
+            this.openDelete.deleteOpen = !this.openDelete.deleteOpen;
+            this.tempId = null;
             this.getFilter();
-            this.Delete.Confirm = !this.Delete.Confirm;
+            
+    
         },
         getFilter(){
             
@@ -353,7 +379,15 @@ export default {
   }
   tr.table-row.head.filter select {
     border: none !important;
+    border-radius: 0px !important ;
+    height: 100%;
     
   }
+  tr.table-row.head.filter td {
+      padding: 0 !important;
+}
+  tr.table-row.head.filter input,select {
+    height: 20px;
+}
 
 </style>

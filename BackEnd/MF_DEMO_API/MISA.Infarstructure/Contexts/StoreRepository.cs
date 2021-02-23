@@ -9,6 +9,7 @@ namespace MISA.DataLayer.Contexts
 {
     public class StoreRepository: DbContext<Store>, IStoreRepository
     {
+        #region Method
         public IEnumerable<Store> GetByFilter(string code, string name, string address, string phone, string status)
         {
             //var stores = _dbConnection.Query<Store>($"Proc_FilterStore",filter, commandType: CommandType.StoredProcedure);
@@ -16,5 +17,7 @@ namespace MISA.DataLayer.Contexts
             var stores = _dbConnection.Query<Store>(sql);
             return stores;
         }
+
+        #endregion
     }
 }

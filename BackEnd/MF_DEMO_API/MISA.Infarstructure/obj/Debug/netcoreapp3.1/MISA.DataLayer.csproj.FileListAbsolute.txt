@@ -22,3 +22,17 @@ C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\o
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csproj.CopyComplete
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.dll
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.pdb
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.DataLayer.deps.json
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.DataLayer.dll
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.DataLayer.pdb
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Common.dll
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csprojAssemblyReference.cache
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.AssemblyInfoInputs.cache
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.AssemblyInfo.cs
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csproj.CopyComplete
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.dll
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.pdb
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.Properties.Resources.resources
+C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.DataLayer.csproj.GenerateResource.cache

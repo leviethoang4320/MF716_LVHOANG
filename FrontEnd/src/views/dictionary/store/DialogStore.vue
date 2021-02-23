@@ -6,7 +6,7 @@
         
         <div class="dialog-content">
             <div class="dialog-title">
-                <span class="headline">{{info.status}}</span>
+                <span class="headline">{{openDialog.status}}</span>
                 <span class="icon-close"  @click="dlg_close()"></span>
             </div>
             
@@ -18,7 +18,11 @@
                <div class="m-row  ">
                 <div class="m-col m-flex">
                     <div class="m-label mg-top-5px" >Mã cửa hàng (<span class="label-required">*</span>)</div>
-                    <div  class="m-control input mg-left-10px " ><input ref="code" v-model="storeInfo.StoreCode"  required class="input-required" type="text" /></div>
+                    <div  class="m-control input mg-left-10px " >
+                      <input ref="code" v-model="storeInfo.StoreCode"  required 
+                      @blur="validateData('StoreCode')"
+                      :class="{'error-required': !validate.StoreCode}" type="text" />
+                    </div>
                 </div>
                 
             </div>
@@ -61,7 +65,7 @@
                 <div class=" detail m-flex dlg-left" >
                     <div class="m-label mg-top-5px" >Tỉnh/Thành phố </div>
                     <div class="m-control input-select mg-left-10px" >
-                       <select @change="filterDistrict()" v-model="ProvinceId">
+                       <select @change="filterDistrict()" v-model="ProvinceId_">
                                     <option v-for="(data,index) in ProvinceData" :key="index" :value="data.ProvinceId">{{data.ProvinceName}}</option>
                                     
                         </select>
@@ -70,7 +74,7 @@
                 <div class=" detail m-flex dlg-right" >
                     <div class="m-label mg-top-5px">Huyện/Quận </div>
                     <div class="m-control input-select mg-left-10px" >
-                        <select @change="filterWard()" v-model="DistrictId">
+                        <select @change="filterWard()" v-model="DistrictId_">
                                     <option v-for="(data,index) in DistrictData" :key="index" :value="data.DistrictId">{{data.DistrictName}}</option>
                                     
                         </select>
@@ -83,7 +87,7 @@
                 <div class=" detail m-flex dlg-left" >
                     <div class="m-label mg-top-5px">Xã/Phường </div>
                     <div class="m-control input-select mg-left-10px" >
-                        <select v-model="WardId">
+                        <select v-model="WardId_">
                                     <option v-for="(data,index) in WardData" :key="index" :value="data.WardId">{{data.WardName}}</option>
                                     
                         </select>
@@ -121,7 +125,8 @@
   import axios from 'axios'
   export default {
     props:{
-        info: Object,
+        focusData: Object,
+        openDialog: Object
         
     },
     data: () => ({
@@ -133,41 +138,41 @@
             WardId: null,
             TaxCode: null,
             Street:null,
-            DistrictName:null,
-            ProvinceData:null,
-            DistrictData:null,
-          
+            ProvinceId:null,
+            DistrictId:null,
+            
         },
-        ProvinceId:null,
+        ProvinceId_:null,
         ProvinceName:null,
-        DistrictId:null,
-        WardId:null,
+        DistrictId_:null,
+        WardId_:null,
         DistrictName:null,
         ProvinceData:null,
         DistrictData:null,
         WardData:null,
-        add:true
+        add:true,
+        validate: {
+            StoreCode: true,
+            StoreName: true,
+            Address: true,
+        }
     }),
     mounted() {
       
        this.$refs.code.focus();
       
-       if(this.info.StoreId!=null&&this.info.status == "Sửa thông tin cửa hàng"){
+       if(this.focusData.StoreId!=null&&this.openDialog.status == "Sửa thông tin cửa hàng"){
             this.add = false;
-            axios.get('https://localhost:44384/api/Stores/'+this.info.StoreId)
-            .then(response => {
-               
-                    
+            
                     for( var _item in this.storeInfo){
                       
                         var item = _item.toString();
-                        this.storeInfo[item] = response.data[item];
+                        this.storeInfo[item] = this.focusData[item];
                     }
-                    this.ProvinceId = response.data.ProvinceId;
-                    this.DistrictId = response.data.DistrictId;
-                    this.WardId = response.data.WardId;
-            })
-            .catch(error => console.log(error))
+                    this.ProvinceId_ = this.focusData.ProvinceId;
+                    this.DistrictId_ = this.focusData.DistrictId;
+                    this.WardId_ = this.focusData.WardId;
+           
 
             axios.get('https://localhost:44384/api/Provinces/')
             .then(response => {
@@ -207,14 +212,21 @@
         
     },
     methods: {
+      validateData(key) {
+        if (this.storeInfo[key] === null || this.storeInfo[key] === "") {
+          this.validate[key] = false;
+        } else {
+          this.validate[key] = true;
+        }
+      },
         dlg_close(){
             
             this.$emit('close');
         },
         save(){
-          this.storeInfo.ProvinceId = this.ProvinceId;
-          this.storeInfo.DistrictId = this.DistrictId;
-          this.storeInfo.WardId = this.WardId;
+          this.storeInfo.ProvinceId = this.ProvinceId_;
+          this.storeInfo.DistrictId = this.DistrictId_;
+          this.storeInfo.WardId = this.WardId_;
           if(!this.storeInfo.StoreCode){
             alert("Bạn chưa nhập Mã cửa hàng ( bắt buộc ) !");
             return;
@@ -227,17 +239,17 @@
             alert("Bạn chưa nhập Địa chỉ cửa hàng ( bắt buộc ) !");
             return;
           }
-          if(this.info.StoreId && this.info.status == "Sửa thông tin cửa hàng"){
+          if(this.focusData.StoreId && this.openDialog.status == "Sửa thông tin cửa hàng"){
              
                
-               axios.put("https://localhost:44384/api/Stores/"+this.info.StoreId,this.storeInfo)
+               axios.put("https://localhost:44384/api/Stores/"+this.focusData.StoreId,this.storeInfo)
                     .then(() => {
                        
                         alert('Sửa thành thành công!');                                             
                         this.$emit('close');
                        //eventBus.$emit('reLoad');
                     })
-                    .catch(error => console.log(error.response.data.Messenger))
+                    .catch(error => alert(error.response.data.Messenger))
            }
            else{
                 
@@ -258,10 +270,10 @@
           this.$emit('save-add');
         },
         filterDistrict(){
-          console.log(this.ProvinceId)
-          if(this.ProvinceId!=null){
+          console.log(this.ProvinceId_)
+          if(this.ProvinceId_!=null){
          
-            axios.get('https://localhost:44384/api/Districts/province/'+this.ProvinceId)
+            axios.get('https://localhost:44384/api/Districts/province/'+this.ProvinceId_)
             .then(response => {
                
                     
@@ -271,10 +283,10 @@
           }
         },
         filterWard(){
-          console.log(this.DistrictId)
-          if(this.DistrictId!=null){
+          console.log(this.DistrictId_)
+          if(this.DistrictId_!=null){
          
-            axios.get('https://localhost:44384/api/Wards/district/'+this.DistrictId)
+            axios.get('https://localhost:44384/api/Wards/district/'+this.DistrictId_)
             .then(response => {
                
                     
@@ -290,6 +302,9 @@
 
 </script>
 <style scoped>
+.error-required {
+  border: 1px solid red !important;
+}
   .input{
     width: 70%;
     position:absolute;

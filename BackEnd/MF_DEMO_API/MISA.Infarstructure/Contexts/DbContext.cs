@@ -12,19 +12,19 @@ namespace MISA.DataLayer
 {
     public class DbContext<TEntity> : IDbContext<TEntity>
     {
+        #region Declare
+
         /// <summary>
         /// chuỗi kết nối đến DB: MS2_16_LVHoang_CUKCUK
         /// </summary>
-        public string connectionString = "Host = 47.241.69.179;" +
-            "Port= 3306;" +
-            "Database =MF716_LVHOANG;" +
-            "User Id = dev;" +
-            "Password = 12345678;" +
-            "Character Set=utf8";
+        public string connectionString = Properties.Resources.connectionString;
 
-        protected IDbConnection _dbConnection;
+        protected IDbConnection _dbConnection; 
+
+        #endregion
 
         #region Constructor
+
         public DbContext()
         {
             _dbConnection = new MySqlConnection(connectionString);
@@ -32,13 +32,6 @@ namespace MISA.DataLayer
         #endregion
 
         #region Methods
-
-
-        /// <summary>
-        /// Lấy toàn bộ danh sách 
-        /// </summary>
-        /// <typeparam name="TEntity">kiểu của đối tượng cần lấy về</typeparam>
-        /// <returns>Trả về danh sách các object</returns>
 
         public IEnumerable<TEntity> GetAll()
         {
@@ -48,13 +41,7 @@ namespace MISA.DataLayer
             return entities;
         }
 
-        /// <summary>
-        /// Lấy dữ liệu theo commandText truyền vào
-        /// </summary>
-        /// <typeparam name="TEntity">kiểu của object</typeparam>
-        /// <param name="commandText">mã SQL</param>
-        /// <returns>mảng các object lấy được từ db</returns>
-        /// CreatedBy: NVMANH (24/12/2020)
+        
         public IEnumerable<TEntity> GetData(string commandText)
         {
             string className = typeof(TEntity).Name;
@@ -64,24 +51,14 @@ namespace MISA.DataLayer
         }
 
 
-        /// <summary>
-        /// Lấy danh sách theo Id truyền vào
-        /// </summary>
-        /// <typeparam name="TEntity">kiểu của đối tượng cần lấy về</typeparam>
-        /// <returns>Trả về dánh sách 1 object</returns>
-
+        
         public TEntity GetById(object id)
         {
             string className = typeof(TEntity).Name;
             var sql = $"SELECT * FROM {className} WHERE {className}Id = '{id.ToString()}'";
             return _dbConnection.Query<TEntity>(sql).FirstOrDefault();
         }
-        /// <summary>
-        /// Thêm mới 1 đối tượng 
-        /// </summary>
-        /// <typeparam name="TEntity"> Kiểu đối tượng thêm</typeparam>
-        /// <param name="entity">đối tượng thêm mới </param>
-        /// <returns>số dòng dữ liệu ảnh hưởng</returns>
+        
         public int Insert(TEntity entity)
         {
             string className = typeof(TEntity).Name;
@@ -90,12 +67,7 @@ namespace MISA.DataLayer
             return effectRows;
         }
 
-        /// <summary>
-        /// Sửa bản ghi
-        /// </summary>
-        /// <typeparam name="TEntity">Kiểu đối tượng muốn sửa</typeparam>
-        /// <param name="entity">đối tượng sau khi sửa</param>
-        /// <returns>số dòng ảnh hưởng</returns>
+        
         public int Update(TEntity entity, Guid id)
 
         {
@@ -107,12 +79,7 @@ namespace MISA.DataLayer
             return effectRows;
         }
 
-        /// <summary>
-        /// Xóa bản ghi
-        /// </summary>
-        /// <typeparam name="TEntity">Kiểu đối tượng cần xóa</typeparam>
-        /// <param name="id">Id đối tượng cần xóa</param>
-        /// <returns>số dòng ảnh hưởng</returns>
+        
         public int Delete(object id)
         {
             string className = typeof(TEntity).Name;

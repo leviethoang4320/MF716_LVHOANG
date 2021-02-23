@@ -3,7 +3,7 @@
         <div class="dialog-bg"></div>
         <div class="dialog-confirm"  >
             <div class="dialog-title">Xóa dữ liệu</div>
-            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{this.Delete.StoreName}}</span> khỏi danh sách cửa hàng?</div>
+            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{this.focusData.StoreName}}</span> khỏi danh sách cửa hàng?</div>
             <div class="dialog-footer">
                 
                 <button @click="del()"  class="m-btn m-btn-default m-btn-del" ><span></span><span  class="btn-text">Xóa</span></button>
@@ -18,7 +18,7 @@
 import axios from 'axios'
 export default {
     props:{
-        Delete: Object,
+        focusData: Object,
     },
     data:() => {
         return {
@@ -28,7 +28,7 @@ export default {
     methods: {
         del(){
             
-           axios.delete('https://localhost:44384/api/Stores/'+this.Delete.StoreId)
+           axios.delete('https://localhost:44384/api/Stores/'+this.focusData.StoreId)
             .then(response => {
 
                     console.log(response);

@@ -1,14 +1,4 @@
 @import url('basics/_base.css');
-/*@import url( "./basics/common");
-@import url( "./basics/toolbar");
-@import url( "./layout/header");
-@import url( "./layout/navbar");
-@import url( "./layout/content");
-@import url( "./basics/link");
-@import url( "./basics/button");
-@import url( "./basics/table");
-@import url( "./basics/input");
-@import url( "./basics/icon");*/
 @import url( "layout/_navbar.css");
 @import url( "layout/_header.css");
 @import url( "layout/_content.css");
@@ -26,20 +16,12 @@ body {
     font-size: 13px !important;
 }
 
-.v-application .title {
+.title {
     font-family: GoogleSans-Regular !important;
-}
-
-.v-application {
-    font-family: GoogleSans-Regular !important;
-    font-size: 13px !important;
-    color: #000000 !important;
-}
-
-.v-application a {
     font-weight: bold;
-    color: #2c3e50 !important;
 }
+
+
 
 @font-face {
     font-family: 'GoogleSans-Regular';

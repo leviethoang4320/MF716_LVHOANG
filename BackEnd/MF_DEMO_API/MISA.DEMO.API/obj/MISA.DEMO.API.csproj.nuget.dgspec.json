@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj": {}
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj": {
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
+        "projectUniqueName": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
         "projectName": "MISA.Service",
-        "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
-        "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\obj\\",
+        "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj",
+        "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
-                "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
+              "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+                "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
               },
-              "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj": {
-                "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj"
+              "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj"
               }
             }
           }
@@ -65,17 +65,17 @@
         }
       }
     },
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
+        "projectUniqueName": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
         "projectName": "MISA.Common",
-        "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
-        "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\obj\\",
+        "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
+        "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,17 +119,17 @@
         }
       }
     },
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj": {
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj",
+        "projectUniqueName": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj",
         "projectName": "MISA.DEMO.API",
-        "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj",
-        "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\obj\\",
+        "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\MISA.DEMO.API.csproj",
+        "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.DEMO.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -143,11 +143,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj": {
-                "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj"
+              "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj": {
+                "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.ApplicationCore\\MISA.Service.csproj"
               },
-              "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
-                "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
+              "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+                "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
               }
             }
           }
@@ -217,17 +217,17 @@
         }
       }
     },
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj": {
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
         "projectName": "MISA.DataLayer",
-        "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
-        "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\obj\\",
+        "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -241,8 +241,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
-                "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
+              "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+                "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
               }
             }
           }

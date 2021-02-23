@@ -11,8 +11,10 @@ namespace MISA.DataLayer.Contexts
     {
         public IEnumerable<Ward> GetByDistrictId(string DistrictId)
         {
+            #region Method
             var sql = $"SELECT * FROM Ward WHERE DistrictId = '{DistrictId}' ";
             return _dbConnection.Query<Ward>(sql);
         }
+        #endregion
     }
 }

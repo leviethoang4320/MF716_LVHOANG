@@ -1,12 +1,12 @@
 <template>
-     <div class="header">
+     <div class="header title">
         <div class="header-left mg-left-20px" >
             <Span style="font-size:18px">Cửa hàng</Span>
         </div>
 
         <div class="header-right">
             <div class="store-main">
-                <select style="margin-top: 20px; margin-right: 10px;">
+                <select style="margin-top: 10px; ">
                     <option>CANIFA-130 Xuân Thủy</option>
                 </select>
             </div>

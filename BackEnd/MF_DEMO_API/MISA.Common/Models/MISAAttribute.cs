@@ -14,7 +14,7 @@ namespace MISA.Common.Models
     /// <summary>
     /// Attribute để xác định check bắt buộc nhập
     /// </summary>
-    /// CreatedBy: LVHOANG
+    /// CreatedBy: LVHOANG (21/02/2021)
     [AttributeUsage(AttributeTargets.Property)]
     public class Required:Attribute
     {
@@ -58,7 +58,7 @@ namespace MISA.Common.Models
 
 
     /// <summary>
-    /// Attribute để xác định check trùng
+    /// Attribute để xác định check độ dài tối đa
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
     public class MaxLength : Attribute
