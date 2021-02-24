@@ -10,6 +10,8 @@ namespace MISA.Common.Models
     public class Store
     {
         #region Constructor
+
+
         public Store()
             {
 
@@ -19,23 +21,42 @@ namespace MISA.Common.Models
 
         #endregion
 
-
+        #region Properties
+        /// <summary>
+        /// Id cửa hàng
+        /// </summary>
         public Guid StoreId { get; set; }
         
+        /// <summary>
+        /// Mã cửa hàng
+        /// </summary>
 
         [Required("Mã cửa hàng")]
         [CheckDuplicate("Mã cửa hàng")]
         [MaxLength("Mã cửa hàng", 20)]
         public string StoreCode { get; set; }
 
+        /// <summary>
+        /// Tên cửa hàng
+        /// </summary>
         [Required("Tên cửa hàng")]
         public string StoreName { get; set; }
 
+        /// <summary>
+        /// Địa chỉ cửa hàng
+        /// </summary>
         [Required("Địa chỉ")]
         public string Address { get; set; }
 
+        /// <summary>
+        /// Số điện thoại
+        /// </summary>
         [CheckDuplicate("Số điện thoại")]
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Trạng thái hoạt động
+        /// </summary>
         public string Status { get; set; }
            
 
@@ -56,9 +77,9 @@ namespace MISA.Common.Models
         public string DistrictId { get; set; }
         
         public string ProvinceId { get; set; }
-        
 
+        #endregion
 
     }
-    
+
 }

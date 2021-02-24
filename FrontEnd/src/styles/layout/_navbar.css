@@ -3,7 +3,7 @@
     float: left;
     width: 220px;
     height: 100vh;
-    background-color: #2b3173;
+    background-color: #026b97;
     border-right: 1px solid #bbbbbb;
 }
 
@@ -26,7 +26,7 @@
             background-position: 0 center;
             background-size: contain;
             background-repeat: no-repeat;
-            background-color: #1e235a;
+            background-color: #00577b;
         }
 
     .navbar .navbar-content {
@@ -39,21 +39,21 @@
             height:44px;
             cursor:pointer;
             line-height:44px;
-            background-color: #2b3173;
+            background-color: #026b97;
             color: #ffffff;
         }
 
             .navbar .navbar-content .nav-item:hover {
-                background-color:#242966;
+                background-color:#0088c1;
                 
             }
 
             .navbar .navbar-content .nav-item:focus{
-                background-color:#1e235a;
+                background-color:#00577b;
             }
 
             .navbar .navbar-content .nav-item:active{
-                background-color:#1e235a;
+                background-color:#00577b;
             }
 
             .nav-item .nav-item-icon {

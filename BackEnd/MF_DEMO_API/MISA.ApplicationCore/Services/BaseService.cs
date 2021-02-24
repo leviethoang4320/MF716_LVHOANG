@@ -33,46 +33,63 @@ namespace MISA.Service.Services
 
         #endregion
 
+        #region MeThod
+        /// <summary>
+        /// Lấy toàn bộ dữ liệu
+        /// </summary>
+        /// <returns>toàn bộ dữ liệu</returns>
+        /// CreatedBy: LVHOANG (21/02/2021)
         public IEnumerable<TEntity> GetAll()
         {
             return _dbContext.GetAll();
         }
 
-        
+        /// <summary>
+        /// Lấy dữ liệu theo Id
+        /// </summary>
+        /// <param name="id">Id của đối tượng cần lấy</param>
+        /// <returns>đối tượng cần lấy</returns>
+        /// CreatedBy: LVHOANG (21/02/2021)
         public TEntity GetById(Guid id)
         {
             return _dbContext.GetById(id);
         }
 
-        
+        /// <summary>
+        /// Thêm dữ liệu mới
+        /// </summary>
+        /// <param name="entity"> đối tượng dữ liệu muốn thêm</param>
+        /// <returns> thêm thành công hay thất bại và câu thông báo tùy thuộc</returns>
+        /// CreatedBy: LVHOANG (21/02/2021)
         public ServiceResult Insert(TEntity entity)
         {
-            
+
             // validate dữ liệu:
             ValidateObject(entity, _checkPost);
             if (_serviceResult.MISACode == MISAServiceCode.BadRequest)
             {
                 return _serviceResult;
             }
-            
 
-            try
+
+            return new ServiceResult()
             {
-                _serviceResult.Data = _dbContext.Insert(entity);
-                _serviceResult.Messenger = new List<string>() { Service.Properties.Resources.Msg_Success };
-                _serviceResult.MISACode = MISAServiceCode.Success;
-            }
-            catch
-            {
-                _serviceResult.Messenger = new List<string>() { Service.Properties.Resources.Msg_Success };
-                _serviceResult.MISACode = MISAServiceCode.Exception;
-            }
-            return _serviceResult;
+                Data = _dbContext.Insert(entity),
+                Messenger = new List<string>() { Service.Properties.Resources.Msg_Success },
+                MISACode = MISAServiceCode.Success
+
+            };
         }
 
-        
 
-        
+
+        /// <summary>
+        /// Sửa dữ liệu 
+        /// </summary>
+        /// <param name="id"> ID của đối tượng cần sửa</param>
+        /// <param name="entity"> Đối tượng sau khi đã sửa</param>
+        /// <returns>kết quả sau khi thực hiện và câu thông báo tùy chỉnh</returns>
+        /// CreatedBy: LVHOANG (21/02/2021)
         public ServiceResult Update(Guid id, TEntity entity)
         {
             _checkPost = false;
@@ -96,6 +113,12 @@ namespace MISA.Service.Services
             };
         }
 
+        /// <summary>
+        /// Xóa dữ liệu
+        /// </summary>
+        /// <param name="id">ID đối tượng cần xóa</param>
+        /// <returns> số dòng xóa được</returns>
+        /// CreatedBy: LVHOANG (21/02/2021)
         public ServiceResult Delete(Guid id)
         {
             return new ServiceResult()
@@ -188,5 +211,6 @@ namespace MISA.Service.Services
                 }
             }
         }
+        #endregion
     }
 }

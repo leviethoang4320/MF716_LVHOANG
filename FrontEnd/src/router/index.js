@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Store',
+    name: 'Home',
     redirect: '/dictionary/store',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route

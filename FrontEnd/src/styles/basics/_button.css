@@ -38,7 +38,7 @@
 	color: white;
 }
 .btn-text.cancel{
-	color: #1e235a;
+	color:  #00577b;;
 	
 }
 button.m-btn.m-btn-default {
@@ -47,7 +47,10 @@ button.m-btn.m-btn-default {
    
 }
 button.m-btn.m-btn-default.b-save {
-	background-color: #1e235a;
+	background-color: #00577b;
+}
+button.m-btn.m-btn-default.b-save:hover {
+	background-color: #0088c1;
 }
 button.m-btn.m-btn-default.b-cancel {
 	background-color:  white;

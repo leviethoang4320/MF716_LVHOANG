@@ -103,57 +103,37 @@ input[required]::after {
 input.border-red{
     border: 1px solid #FF4747;
 }
-.loading{
-    display: none;
-}
-.loading-modal{
+
+
+.box-toast-msg.success {
     position: fixed;
     top: 0;
-    left:0;
-    bottom:0;
-    right: 0;
-    background-color: #000;
-    opacity: .5;
-    z-index:999;
-}
-.loading-icon {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    top: calc(50% - 15px);
-    left: calc(50% - 15px);
-    border: 2px solid #4cff00;
-    border-bottom: none;
-    animation: spin 2s linear infinite;
-}
-
-
-.row-selected {
-    background-color: #01916026 !important;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.box-toast-msg {
-    display: none;
-    position: fixed;
     background-color: #ffffff;
-    padding: 24px;
-    color: #019160;
-    font-size: 20px;
-    bottom: 24px;
+    padding: 10px;
+    background-color: #ace4d1;
+    color: #212121;
+    border-radius: 5px;
+    font-size: 18px;
+    /* bottom: 24px; */
     text-align: center;
-    right: 24px;
-    border: 1px solid #ccc;
+    left: calc(50% - 100px);
+    /* border: 1px solid #ccc; */
+    width: 200px;
+}
+.box-toast-msg.error {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    background-color: #f7a5a5;
+    color: #212121;
+    border-radius: 5px;
+    font-size: 18px;
+    /* bottom: 24px; */
+    text-align: center;
+    left: calc(50% - 100px);
+    /* border: 1px solid #ccc; */
+    width: 300px;
 }
 
 .group-label-info{
@@ -162,9 +142,3 @@ input.border-red{
     text-transform:uppercase;
 }
 
-.hr-group-label {
-    width: 70px;
-    margin-left: 0;
-    border: 2px solid #019160;
-    background-color: #019160;
-}

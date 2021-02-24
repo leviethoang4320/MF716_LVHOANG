@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,6 +20,9 @@ using MISA.Service.Interfaces;
 using MISA.Common.Models;
 using MISA.DataLayer.Interfaces;
 using MISA.DataLayer.Contexts;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace MISA.DEMO.API
 {
@@ -98,6 +101,24 @@ namespace MISA.DEMO.API
             {
                 endpoints.MapControllers();
             });
+
+            //Xử lý ngoại lệ
+            app.UseExceptionHandler(a => a.Run(async context =>
+            {
+                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
+                var exception = exceptionHandlerPathFeature.Error;
+                var _serviceResult = new ServiceResult
+                {
+                    Data = null,
+                    Messenger = new List<string>() { Properties.Resources.Error_Exception },
+                    MISACode = Common.Enum.MISAServiceCode.Exception
+                };   
+
+                var result = JsonConvert.SerializeObject(_serviceResult);
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync(result);
+            }));
+            
         }
     }
 }

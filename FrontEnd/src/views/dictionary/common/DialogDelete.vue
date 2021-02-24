@@ -2,12 +2,15 @@
     <div class="dialog">
         <div class="dialog-bg"></div>
         <div class="dialog-confirm"  >
-            <div class="dialog-title">Xóa dữ liệu</div>
-            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{this.focusData.StoreName}}</span> khỏi danh sách cửa hàng?</div>
+            <div class="dialog-title">
+                <span class="headline">Xóa dữ liệu</span>
+                <span class="icon-close"  @click="dlg_close()"></span>
+            </div>
+            <div class="dialog-content">Bạn có chắc muốn xóa <span style="font-weight: bold;">{{this.focusData.StoreName}}</span> khỏi danh sách ?</div>
             <div class="dialog-footer">
                 
-                <button @click="del()"  class="m-btn m-btn-default m-btn-del" ><span></span><span  class="btn-text">Xóa</span></button>
-                <button @click="dlg_close()" class="m-btn m-btn-default" ><span></span><span  class="btn-text">Hủy bỏ</span></button>
+                <button @click="del()"  class="m-btn m-btn-default m-btn-del m-flex" ><div class="icon-del"></div><span  class="btn-text del">Xóa</span></button>
+                <button @click="dlg_close()" class="m-btn m-btn-default" ><span></span><span  class="btn-text cancel">Hủy bỏ</span></button>
             </div>
 
         </div>
@@ -62,7 +65,7 @@ export default {
     height: 50px;
     background-color: white;
     border-radius: 0 0 5px 5px;
-    border-top: 1px solid #e9ebee;
+    border-top: 1px solid #bbbbbb;
     align-items: center;
     justify-content: flex-end;
     padding: 12px 24px;
@@ -88,6 +91,11 @@ export default {
 button.m-btn.m-btn-default.m-btn-del {
     background-color: #e14c4c;
     color: #e9ebee;
+    align-items: center;
 }
+.btn-text.del{
+    margin-left: 10px;
+}
+
 
 </style>

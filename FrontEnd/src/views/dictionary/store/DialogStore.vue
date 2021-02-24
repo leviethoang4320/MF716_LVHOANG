@@ -219,82 +219,68 @@
           this.validate[key] = true;
         }
       },
-        dlg_close(){
+      dlg_close(){
+          
+          this.$emit('close');
+      },
+      save(){
+        this.storeInfo.ProvinceId = this.ProvinceId_;
+        this.storeInfo.DistrictId = this.DistrictId_;
+        this.storeInfo.WardId = this.WardId_;
+        
+        if(this.focusData.StoreId && this.openDialog.status == "Sửa thông tin cửa hàng"){
             
-            this.$emit('close');
-        },
-        save(){
-          this.storeInfo.ProvinceId = this.ProvinceId_;
-          this.storeInfo.DistrictId = this.DistrictId_;
-          this.storeInfo.WardId = this.WardId_;
-          if(!this.storeInfo.StoreCode){
-            alert("Bạn chưa nhập Mã cửa hàng ( bắt buộc ) !");
-            return;
+              
+              axios.put("https://localhost:44384/api/Stores/"+this.focusData.StoreId,this.storeInfo)
+                  .then(() => {
+                      
+                      this.$emit('success');                                           
+                      
+                      
+                  })
+                  .catch(error => this.$emit('error',error.response.data.Messenger))
           }
-          if(!this.storeInfo.StoreName){
-            alert("Bạn chưa nhập Tên cửa hàng ( bắt buộc ) !");
-            return;
+          else{
+              
+              
+              axios.post("https://localhost:44384/api/Stores/",this.storeInfo)
+                  .then((res) => {
+                      
+                      this.$emit('success');
+                      console.log(res);
+                      //eventBus.$emit('reLoad');
+                  })
+                  .catch(errors => {this.$emit('error',errors.response.data.Messenger)})
+                  
           }
-          if(!this.storeInfo.Address){
-            alert("Bạn chưa nhập Địa chỉ cửa hàng ( bắt buộc ) !");
-            return;
-          }
-          if(this.focusData.StoreId && this.openDialog.status == "Sửa thông tin cửa hàng"){
-             
-               
-               axios.put("https://localhost:44384/api/Stores/"+this.focusData.StoreId,this.storeInfo)
-                    .then(() => {
-                       
-                        alert('Sửa thành thành công!');                                             
-                        this.$emit('close');
-                       //eventBus.$emit('reLoad');
-                    })
-                    .catch(error => alert(error.response.data.Messenger))
-           }
-           else{
-                
-               
-               axios.post("https://localhost:44384/api/Stores/",this.storeInfo)
-                    .then(() => {
-                       
-                        alert('Thêm thành công!');                                             
-                        this.$emit('close');
-                        //eventBus.$emit('reLoad');
-                    })
-                    .catch(response => console.log(response))
-                    
-           }
-        },
-        save_add(){
-          this.save();
-          this.$emit('save-add');
-        },
-        filterDistrict(){
-          console.log(this.ProvinceId_)
-          if(this.ProvinceId_!=null){
-         
-            axios.get('https://localhost:44384/api/Districts/province/'+this.ProvinceId_)
-            .then(response => {
-               
-                    
-                    this.DistrictData = response.data;
-            })
-            .catch(error => console.log(error))
-          }
-        },
-        filterWard(){
-          console.log(this.DistrictId_)
-          if(this.DistrictId_!=null){
-         
-            axios.get('https://localhost:44384/api/Wards/district/'+this.DistrictId_)
-            .then(response => {
-               
-                    
-                    this.WardData = response.data;
-            })
-            .catch(error => console.log(error))
-          }
+      },
+        
+      filterDistrict(){
+        console.log(this.ProvinceId_)
+        if(this.ProvinceId_!=null){
+        
+          axios.get('https://localhost:44384/api/Districts/province/'+this.ProvinceId_)
+          .then(response => {
+              
+                  
+                  this.DistrictData = response.data;
+          })
+          .catch(error => console.log(error))
         }
+      },
+      filterWard(){
+        console.log(this.DistrictId_)
+        if(this.DistrictId_!=null){
+        
+          axios.get('https://localhost:44384/api/Wards/district/'+this.DistrictId_)
+          .then(response => {
+              
+                  
+                  this.WardData = response.data;
+          })
+          .catch(error => console.log(error))
+        }
+      }
         
     },
     
