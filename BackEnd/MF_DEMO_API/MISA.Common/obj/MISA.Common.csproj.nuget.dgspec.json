@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {}
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+    "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
+        "projectUniqueName": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
         "projectName": "MISA.Common",
-        "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
-        "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\obj\\",
+        "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj",
+        "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

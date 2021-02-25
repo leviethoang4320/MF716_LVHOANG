@@ -21,7 +21,7 @@
                     <div  class="m-control input mg-left-10px " >
                       <input ref="code" v-model="storeInfo.StoreCode"  required 
                       @blur="validateData('StoreCode')"
-                      :class="{'error-required': !validate.StoreCode}" type="text" />
+                      :class="{'error-required': !validate.StoreCode}" type="text" placeholder="Trường bắt buộc nhập" />
                     </div>
                 </div>
                 
@@ -31,7 +31,9 @@
                 <div class="m-flex" >
                     <div class="m-label mg-top-5px">Tên cửa hàng (<span class="label-required">*</span>)</div>
                     <div class="m-control input mg-left-10px" >
-                        <input v-model="storeInfo.StoreName"  class="input-required" type="text" required />
+                        <input v-model="storeInfo.StoreName" placeholder="Trường bắt buộc nhập"  class="input-required" type="text" required 
+                          @blur="validateData('StoreName')"
+                          :class="{'error-required': !validate.StoreName}" />
                     </div>
                 </div>
             </div>
@@ -41,7 +43,10 @@
                 <div class="m-flex" >
                     <div class="m-label mg-top-5px">Địa chỉ (<span class="label-required">*</span>)</div>
                     <div class="m-control input mg-left-10px" >
-                        <input v-model="storeInfo.Address" class="input-required" type="text" required />
+                        <input v-model="storeInfo.Address" class="input-required" type="text" required 
+                        @blur="validateData('Address')"
+                        :class="{'error-required': !validate.Address}" placeholder="Trường bắt buộc nhập"/>
+                        
                     </div>
                 </div>
                 
@@ -61,11 +66,24 @@
                     </div>
                 </div>
             </div>
+            <div class="m-row m-flex ">
+                
+                <div class=" detail m-flex dlg-left" >
+                    <div class="m-label mg-top-5px" >Quốc gia </div>
+                    <div class="m-control input-select mg-left-10px" >
+                       <select name="" id="">
+                         <option value="">Việt Nam</option>
+                       </select>
+                    </div>
+                </div>
+              
+            </div>
             <div class=" m-row m-flex  ">
                 <div class=" detail m-flex dlg-left" >
                     <div class="m-label mg-top-5px" >Tỉnh/Thành phố </div>
                     <div class="m-control input-select mg-left-10px" >
                        <select @change="filterDistrict()" v-model="ProvinceId_">
+                                    <option value="" disabled selected>Tỉnh/Thành phố</option>
                                     <option v-for="(data,index) in ProvinceData" :key="index" :value="data.ProvinceId">{{data.ProvinceName}}</option>
                                     
                         </select>
@@ -75,6 +93,7 @@
                     <div class="m-label mg-top-5px">Huyện/Quận </div>
                     <div class="m-control input-select mg-left-10px" >
                         <select @change="filterWard()" v-model="DistrictId_">
+                                    <option value="" disabled selected>Quận/Huyện</option>
                                     <option v-for="(data,index) in DistrictData" :key="index" :value="data.DistrictId">{{data.DistrictName}}</option>
                                     
                         </select>
@@ -88,6 +107,7 @@
                     <div class="m-label mg-top-5px">Xã/Phường </div>
                     <div class="m-control input-select mg-left-10px" >
                         <select v-model="WardId_">
+                                    <option value="" disabled selected>Xã/Phường</option>
                                     <option v-for="(data,index) in WardData" :key="index" :value="data.WardId">{{data.WardName}}</option>
                                     
                         </select>
@@ -111,6 +131,7 @@
             
             <div class="dialog-footer">
                 <button  class="m-btn m-btn-default b-save" @click="save()"><span class="i-save"></span><span  class="btn-text save">Lưu</span></button>
+                <button  class="m-btn m-btn-default b-save" @click="saveAdd()" style="background-color: white; width: auto; border: 1px solid #005577"><span class="i-save"></span><span style="padding: 5px; color: #00577b" class="btn-text save">Lưu và thêm mới</span></button>
                 
                 <button  class="m-btn m-btn-default b-cancel" @click="dlg_close()"><span class="i-cancel"></span><span  class="btn-text cancel">Hủy</span></button>
                 
@@ -142,10 +163,10 @@
             DistrictId:null,
             
         },
-        ProvinceId_:null,
+        ProvinceId_:"",
         ProvinceName:null,
-        DistrictId_:null,
-        WardId_:null,
+        DistrictId_:"",
+        WardId_:"",
         DistrictName:null,
         ProvinceData:null,
         DistrictData:null,
@@ -158,9 +179,10 @@
         }
     }),
     mounted() {
-      
+      //focus vào dòng đầu tiên
        this.$refs.code.focus();
       
+      //check nếu sửa thì load dữ liệu
        if(this.focusData.StoreId!=null&&this.openDialog.status == "Sửa thông tin cửa hàng"){
             this.add = false;
             
@@ -197,6 +219,7 @@
             .catch(error => console.log(error))
 
         }
+        //nếu là thêm mới thì load dữ liệu các tỉnh
         else {
           this.add = true;
           axios.get('https://localhost:44384/api/Provinces/')
@@ -212,6 +235,7 @@
         
     },
     methods: {
+      //validate dữ liệu nhập trống
       validateData(key) {
         if (this.storeInfo[key] === null || this.storeInfo[key] === "") {
           this.validate[key] = false;
@@ -219,10 +243,12 @@
           this.validate[key] = true;
         }
       },
+      //đóng dialog
       dlg_close(){
           
           this.$emit('close');
       },
+      //lưu lại sửa hoặc thêm
       save(){
         this.storeInfo.ProvinceId = this.ProvinceId_;
         this.storeInfo.DistrictId = this.DistrictId_;
@@ -248,13 +274,45 @@
                       
                       this.$emit('success');
                       console.log(res);
-                      //eventBus.$emit('reLoad');
+                      
                   })
                   .catch(errors => {this.$emit('error',errors.response.data.Messenger)})
                   
           }
       },
+      //lưu và thêm mới
+      saveAdd(){
+        this.storeInfo.ProvinceId = this.ProvinceId_;
+        this.storeInfo.DistrictId = this.DistrictId_;
+        this.storeInfo.WardId = this.WardId_;
         
+        if(this.focusData.StoreId && this.openDialog.status == "Sửa thông tin cửa hàng"){
+            
+              
+              axios.put("https://localhost:44384/api/Stores/"+this.focusData.StoreId,this.storeInfo)
+                  .then(() => {
+                      
+                      this.$emit('success');                                           
+                      
+                      
+                  })
+                  .catch(error => this.$emit('error',error.response.data.Messenger))
+          }
+          else{
+              
+              
+              axios.post("https://localhost:44384/api/Stores/",this.storeInfo)
+                  .then((res) => {
+                      
+                      this.$emit('success');
+                      console.log(res);
+                      
+                  })
+                  .catch(errors => {this.$emit('error',errors.response.data.Messenger)})
+                  
+          }
+      },
+      //lọc ra các huyện theo tỉnh
       filterDistrict(){
         console.log(this.ProvinceId_)
         if(this.ProvinceId_!=null){
@@ -268,6 +326,7 @@
           .catch(error => console.log(error))
         }
       },
+      //lọc ra các xã theo huyện
       filterWard(){
         console.log(this.DistrictId_)
         if(this.DistrictId_!=null){

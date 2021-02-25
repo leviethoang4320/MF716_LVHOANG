@@ -5665,19 +5665,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lvhoang\\.nuget\\packages\\": {}
+    "C:\\Users\\taikh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
       "projectName": "MISA.DataLayer",
-      "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
-      "packagesPath": "C:\\Users\\lvhoang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\obj\\",
+      "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\MISA.DataLayer.csproj",
+      "packagesPath": "C:\\Users\\taikh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Infarstructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lvhoang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\taikh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5691,8 +5691,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
-              "projectPath": "C:\\Users\\lvhoang\\Desktop\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
+            "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj": {
+              "projectPath": "C:\\Users\\taikh\\OneDrive\\Máy tính\\MF716_LVHOANG\\BackEnd\\MF_DEMO_API\\MISA.Common\\MISA.Common.csproj"
             }
           }
         }
@@ -5731,7 +5731,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
