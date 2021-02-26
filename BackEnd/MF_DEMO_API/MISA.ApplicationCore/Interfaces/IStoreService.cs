@@ -18,5 +18,6 @@ namespace MISA.Service.Interfaces
         /// <returns>Các cửa hàng được lọc theo điều kiện</returns>
         /// CreatedBy: LVHOANG (21/02/2021)
         public IEnumerable<Store> GetFilter(string code, string name, string address, string phone, string status);
+        public IEnumerable<Store> GetPaginate(int page, int pageSize);
     }
 }

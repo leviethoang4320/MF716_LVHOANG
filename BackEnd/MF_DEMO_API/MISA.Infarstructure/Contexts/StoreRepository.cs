@@ -7,7 +7,7 @@ using MISA.DataLayer.Interfaces;
 
 namespace MISA.DataLayer.Contexts
 {
-    public class StoreRepository: DbContext<Store>, IStoreRepository
+    public class StoreRepository : DbContext<Store>, IStoreRepository
     {
         #region Method
 
@@ -29,6 +29,7 @@ namespace MISA.DataLayer.Contexts
             return stores;
         }
 
+        
         #endregion
     }
 }

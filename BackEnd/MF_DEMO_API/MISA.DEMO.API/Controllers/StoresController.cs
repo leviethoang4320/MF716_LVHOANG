@@ -28,16 +28,18 @@ namespace MISA.DEMO.API.Controllers
         /// <param name="phone">Số điện thoại</param>
         /// <param name="status">Trạng thái hoạt động</param>
         /// <returns>Số dòng dữ liệu ảnh hưởng</returns>
-        [HttpGet("filter/{code}&{name}&{address}&{phone}&{status}")]
-        public IActionResult Get( string code, string name, string address, string phone, string status)
+        [HttpGet("filter")]
+        public IActionResult Get( string code = "", string name = "", string address = "", string phone = "", string status = "")
         {
-            if (code == "all") code = "";
-
-            if (name == "all") name = "";
-            if (address == "all") address = "";
-            if (phone == "all") phone = "";
-            if (status == "all") status = "";
+            
             var stores = _baseService.GetFilter(code,name,address,phone,status);
+            return Ok(stores);
+        }
+
+        [HttpGet("paginate")]
+        public IActionResult Get(int page, int pageSize)
+        {
+            var stores = _baseService.GetPaginate(page, pageSize);
             return Ok(stores);
         }
     

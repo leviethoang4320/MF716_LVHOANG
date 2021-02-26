@@ -112,8 +112,8 @@
                     <div class="m-btn-prev-page"></div>
                 </div>
                 <div>Trang</div>
-                <div class="page-now " style="border: 1px solid rgb(133, 132, 132); height:20px; width:40px; padding-left:5px">1</div>
-                <div >trên 1</div>
+                <div class="page-now " style="border: 1px solid rgb(133, 132, 132); height:20px; width:40px; padding-left:5px">{{page}}</div>
+                <div ></div>
                 <div class="btn-select-page ">
                     <div class="m-btn-next-page"></div>
                 </div>
@@ -124,8 +124,11 @@
                     <div class="reload"></div>
                 </div>
                 <div>
-                    <select name="" id="" style="height: 25px;">
-                        <option value="">20</option>
+                    <select name="" v-model="pageSize" @change="load()" style="height: 25px;">
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                        <option value="30">30</option>
+                        
                     </select>
                 </div>
             </div>
@@ -222,18 +225,21 @@ export default {
             },
             success_: false,
             error_:false,
-            msg_error: ""
+            msg_error: "",
+            page: 1,
+            pageSize: 10
         }
     },
-     mounted() {
+     created() {
         
         this.load();
     },
      methods: {
         //tải xuống dữ liệu
         load(){
+            
              axios
-            .get('https://localhost:44384/api/Stores')
+            .get('https://localhost:44384/api/Stores/paginate',{params: {page: this.page, pageSize: this.pageSize}})
             .then(response => {
                 this.resData = response.data;               
             })
@@ -293,33 +299,12 @@ export default {
         },
         //lọc dữ liệu theo điều kiện từng cột
         getFilter(){            
-            if(this.filter.code == null || this.filter.code.trim() == ""){
-                this.filter_.code = "all";               
-            }
-                else
-                this.filter_.code = this.filter.code;
-            if(this.filter.name == null || this.filter.name.trim() == ""){
-                this.filter_.name = "all";
-            }
-            else 
-                this.filter_.name = this.filter.name;
-            if(this.filter.address == null || this.filter.address.trim() == ""){
-                this.filter_.address = "all";
-            }
-            else
-                this.filter_.address = this.filter.address
-            if(this.filter.phone == null || this.filter.phone.trim() == ""){
-                this.filter_.phone = "all";
-            }
-            else 
-                this.filter_.phone = this.filter.phone;
-            if(this.filter.status == null || this.filter.status.trim() == ""){
-                this.filter_.status = "all";
-            }
-            else 
-                this.filter_.status = this.filter.status;
             
-            axios.get('https://localhost:44384/api/Stores/filter/'+this.filter_.code + "&"+this.filter_.name + "&"+this.filter_.address + "&"+this.filter_.phone + "&"+this.filter_.status )
+            
+            axios.get('https://localhost:44384/api/Stores/filter', {params:
+               
+            { code: this.filter.code , name: this.filter.name , address:this.filter.address , phone: this.filter.phone, status: this.filter.status }}
+            )
             .then(response => {
                 this.resData = response.data;                                
             })

@@ -46,5 +46,6 @@ namespace MISA.Service
         /// <returns> số dòng xóa được</returns>
         /// CreatedBy: LVHOANG (21/02/2021)
         public ServiceResult Delete(Guid id);
+        
     }
 }

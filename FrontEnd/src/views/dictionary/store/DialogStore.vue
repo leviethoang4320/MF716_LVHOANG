@@ -85,7 +85,8 @@
                        <select @change="filterDistrict()" v-model="ProvinceId_">
                                     <option value="" disabled selected>Tỉnh/Thành phố</option>
                                     <option v-for="(data,index) in ProvinceData" :key="index" :value="data.ProvinceId">{{data.ProvinceName}}</option>
-                                    
+                                  
+                                  
                         </select>
                     </div>
                 </div>

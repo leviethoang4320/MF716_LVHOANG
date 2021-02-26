@@ -713,7 +713,6 @@ C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Deb
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\staticwebassets\MISA.DEMO.API.StaticWebAssets.Manifest.cache
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\staticwebassets\MISA.DEMO.API.StaticWebAssets.xml
-C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\MISA.DEMO.API.styles.css
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.RazorTargetAssemblyInfo.cache
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.csproj.CopyComplete
 C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.dll
@@ -844,3 +843,4 @@ C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.A
 C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.dll
 C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.pdb
 C:\Users\taikh\OneDrive\Máy tính\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\obj\Debug\netcoreapp3.1\MISA.DEMO.API.genruntimeconfig.cache
+C:\Users\lvhoang\Desktop\MF716_LVHOANG\BackEnd\MF_DEMO_API\MISA.DEMO.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
